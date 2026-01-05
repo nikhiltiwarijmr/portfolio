@@ -1,0 +1,237 @@
+:root {
+  --primary: #0077b6;
+  --light: ;
+  --dark: ;
+  --text: ;
+  --bg: rgb(18, 18, 62);
+}
+.dark {
+    background: #0a0f1f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #e5e7eb;
+  background: #020a27;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* NAVBAR */
+.navbar {
+  background: var(--bg);
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #a78bfa;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  background: var(--light);
+  padding: 5rem 0 4rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.hero h1 span {
+  color: #a78bfa;
+}
+
+.hero p {
+  margin-bottom: 1.5rem;
+}
+
+
+.btn {
+  display: inline-block;
+  background: #7c3aed;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.btn.outline {
+  background: transparent;
+  border: 2px solid #7c3aed
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* SECTIONS */
+.section {
+  padding: 3rem 0;
+}
+
+.bg-light {
+  background: var(--light);
+}
+
+.bg-dark {
+  background: var(--dark);
+  color: #fff;
+}
+
+.bg-dark a {
+  color: #90e0ef;
+}
+
+/* SKILLS */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+}
+
+.skill-card {
+  background: #111827;
+  border: 1px solid #212478;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 4px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* PROJECTS / JOBS */
+.project-card, .job {
+  margin-bottom: 2rem;
+}
+
+.project-card a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+}
+
+/* MOBILE NAV */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: var(--bg);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    border: 1px solid #ddd;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+/* ---------- SOFT FLOAT-IN FOR ALL SECTIONS ---------- */
+.section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- ICON BOUNCE ON HOVER (GitHub / LinkedIn links) ---------- */
+footer a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+footer a:hover {
+  transform: translateY(-3px);
+}
+
+/* ---------- PULSE ON DOWNLOAD BUTTON ---------- */
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(0,119,182,0.5); }
+  70%  { box-shadow: 0 0 0 12px rgba(0,119,182,0); }
+  100% { box-shadow: 0 0 0 0 rgba(0,119,182,0); }
+}
+.btn {
+  animation: pulse 2.5s infinite;
+}
+body {
+  background: #020a27;
+  color: #e5e7eb
+}
+/* certificate cards */
+.cert-card {
+  
+  border: 1px solid #e5e5e5;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.05);
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 70px; /* height of your sticky nav */
+}
